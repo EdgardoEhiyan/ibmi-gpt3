@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------
 # TRAIGO DATA DEL  IBM i
 # CON CONSULTA SQL en lenguaje natural , implemenando API de OPEN IA
-# y tiene la opcion de convertir  vos a texto
+# y tiene la opcion de convertir  voz a texto
 # #                                                Edgardo-Ehiyan
 #----------------------------------------------------------------------
 
@@ -185,7 +185,7 @@ def service1():
   if paso==1:
    
   
-   workx=gpt3(query)  # pruebo lo que grabao aca para ver si sirve (SE PASA A LA LINEA 201 PROBAR SINO SACAR)
+   workx=gpt3(query)  
    print(gpt3(query))
    paso=paso+1
   # ----------------------------------------------------------- #
@@ -201,7 +201,7 @@ def service1():
   
    
 
-  entrysql.insert('1.0',workx) # pruebo lo que grabao aca para ver si sirve (SE PASA A LA LINEA 201 PROBAR SINO SACAR)
+  entrysql.insert('1.0',workx) 
   
     
   c1 = conn.cursor()
@@ -209,7 +209,7 @@ def service1():
   
   if query.find("sql") != -1 or query.find("SQL") != -1:
    work=gpt3(query)
-   work=workx         # pruebo esto es una prueba sino borrar y borrar linea 182
+   work=workx         
    veo=work[0:7]
    bandera=1
    
@@ -224,7 +224,7 @@ def service1():
      
      
      c2.execute(work5)
-     c2.commit()   # ESTE ES EL SECRETO PARA QUE CONFIRME LA CREACION DE UNA TABLA
+     c2.commit()   #  CONFIRMA LA CREACION DE UNA TABLA EN DB2
      c2.close()
      
      del c2
@@ -304,7 +304,7 @@ def service1():
     my_w.mainloop()
   except Exception as e:
     print("no hay datos")
-    my_w.wm_attributes("-topmost", True) # Esta es la línea importante , MANTIENE LA VENTANA POR ENCIMA DE LAS DEMAS.
+    my_w.wm_attributes("-topmost", True) #  MANTIENE LA VENTANA POR ENCIMA DE LAS DEMAS.
    
     
     #mb.showinfo("No hay que mostrar")

@@ -1,9 +1,9 @@
-#-----------------------------------------------------------------------
+#------------------------------------------------------------------------------------------
 # TRAIGO DATA DEL  IBM i
 # CON CONSULTA SQL en lenguaje natural , implemenando API de OPEN IA
 # y tiene la opcion de convertir  voz a texto
-# #                                                Edgardo-Ehiyan
-#----------------------------------------------------------------------
+# Linea 148 generar en https://openai.com ( tu propio "openai.api_key" para que funcione)
+#-------------------------------------------------Edgardo Ehiyan -------------------------
 
 from ast import Return
 from asyncio.windows_events import NULL
